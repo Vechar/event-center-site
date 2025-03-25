@@ -1,8 +1,6 @@
 README.txt
 
-==============================
 ATELIER LUMIÈRE – EVENT CENTER WEBSITE
-==============================
 
 Project Overview:
 ---------------------

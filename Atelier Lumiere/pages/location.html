@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/location.css">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.png">
+
+    <script src="../scripts/index.js" defer></script>
+
+    <title>Our Location</title>
+</head>
+<body>
+    <!--Nav bar-->
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"></path></svg>
+        </button>
+    
+    <nav id="navbar">
+        <ul>
+            <li>
+                <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9"><path d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"></path>
+                    </svg>
+                </button>
+            </li>
+            <li class="logo"><h1>Atelier Lumière</h1></li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a class="active-link" href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+    <!--Main content-->
+
+    <main>
+        <!--Location Text Section-->
+        <section id="location">
+            <div id="location-text">
+                <div id="location-title-container">
+                    <h2>Visit Atelier Lumière</h2>
+                </div>
+                <div id="location-text-container">
+                    <ul>
+                        <li><b>Gallery Address:</b> Rue des Arts, Paris, France</li>
+                        <li><b>Hours:</b>
+                            Tuesday – Sunday: 10:00 AM – 6:00 PM
+                            Closed on Mondays</li>
+                        <li><b>Public Transit:</b>
+                            Metro Line 3 – Arts et Métiers Station
+                            Bus 29 or 75 – Rue de Turbigo Stop</li>
+                        <li><b>Parking:</b>
+                            Street parking and nearby garages available</li>
+                    </ul>
+
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.8741027823376!2d2.335069076628825!3d48.86061107133247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d877937b0f%3A0xb975fcfa192f84d4!2sLouvre%20Museum!5e0!3m2!1sen!2sus!4v1742930090552!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+            </div>
+        </section>
+    <!--Footer-->
+    <footer>
+        <footer id="footer">
+            <div id="footer-social">
+                <ul>
+                    <li class="logo"><h1>Atelier Lumière</h1></li>
+                    <li><p>&copy; 2025 Atelier Lumière. All rights reserved.</p></li>
+                </ul>
+            </div>
+        </footer>
+        
+</body>
+</html>

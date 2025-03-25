@@ -1,0 +1,363 @@
+/* Generic CSS for the entire site */
+:root {
+    --background: #F8F5F2;
+    --primary-accent: #D4AF7F;
+    --secondary-accent: #D8A7B1;
+    --text: #2E2E2E;
+    --link: #A67C9B;
+    --border: #8a704e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-family: 'Lora', serif;
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    min-height: 100vh;
+    height: 100%;
+    background-color: var(--primary-accent);
+}
+
+
+h1 {    
+    font-family: 'Parisienne', cursive;
+    font-size: 2.5rem;
+    color: var(--text);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--primary-accent);
+    border-bottom: 1px solid var(--border);
+}
+
+nav ul, footer ul{
+    list-style: none;
+    display: flex;
+}
+
+nav li, footer li {
+    display: flex;
+}
+
+.logo {
+    margin-right: auto;
+    padding-left: 1em;
+    padding-top: 0.4em;
+    font-size: 1.2rem; 
+    font-weight: 700; 
+    cursor: default;
+}
+
+nav a, nav p {
+    font-size: 1.1rem;
+    font-weight: 600; /* semi-bold weight for text */   
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    color: var(--text);
+    padding: 1.3em 2em;
+    transition: color 0.3s ease;
+}
+
+nav a::after, footer a::after {
+    content: '';
+    position: absolute;
+    bottom: 0.75em;
+    left: 2em;
+    right: 2em;
+    height: 3px;
+    background-color: var(--border);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active-link::after {
+    transform: scaleX(1);
+}
+
+#overlay {
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
+
+#open-sidebar-button svg,
+#close-sidebar-button svg {
+    fill: var(--text);
+    transition: fill 0.3s ease;
+}
+
+#open-sidebar-button:hover svg,
+#close-sidebar-button:hover svg {
+    fill: var(--border);
+}
+
+#open-sidebar-button{
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#close-sidebar-button{
+    background: none;
+    display: none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/* location Content */
+#location-text, #location-details{
+    background-color: var(--background);
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+
+#location-title-container {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#location-text-container{
+    position: relative;
+    margin: auto;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 70vw;
+    font-size: 1.5em;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
+                -10px -10px 10px white;
+}
+
+b {
+    font-weight: 900;
+}
+
+#location-details-text-container ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+#location-text-container::before {
+    content: "";
+    position: absolute;
+    top: 1.5em;
+    left: 5%;
+    width: 5px;
+    height: 25%; 
+    background-color: var(--primary-accent);
+}
+
+#map {
+    width: 100%;
+    height: 50vh;
+    margin-top: 2em;
+}
+
+#location-text h2 {
+    text-align: left;
+    position: relative;
+    padding: 1em;
+    font-size: 4em;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    outline: none;
+}
+
+#location-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0.75em;
+    left: 2em;
+    right: 2em;
+    height: 5px;
+    background-color: var(--primary-accent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.75s ease;
+}
+
+#location-text h2:hover {
+    font-variation-settings: "wght" 400; 
+    letter-spacing: 0px;
+}
+
+#location-text h2:hover::after {
+    transform: scaleX(1.25);
+}
+
+.highlight {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 65%, #FFD0AE 50%);
+}
+
+#form-container {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%; 
+    padding: 1em;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 1em;
+    margin-bottom: 2em; /* Bottom margin */
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: var(--background);
+    color: var(--primary-accent);
+    padding: 5em, 5em;
+    border: 1px solid var(--primary-accent);
+    border-radius: 4px;
+    cursor: pointer;
+    height: 3em;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 700;
+    transition: 0.5s ease;
+}
+
+input[type=submit]:hover {
+    background-color: var(--primary-accent);
+    color: var(--background);
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
+                -10px -10px 10px white;
+}
+
+.star {
+    color: red;
+}
+
+/* Footer */
+#footer {
+    background-color: var(--primary-accent);
+    color: var(--text);
+    padding: 1em;
+}
+
+footer p {
+    padding-top: 1.5em;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 958px){
+
+    /* Navigation */
+
+    #open-sidebar-button, #close-sidebar-button{
+        display: block;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 10;
+        border-left: 1px solid var(--border);
+        transition: right 0.5s ease-out;
+    }
+
+    nav.show{
+        right: 0;
+    }
+
+    nav.show ~ #overlay{
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #open-sidebar-button {
+        background-color: var(--primary-accent);
+        z-index: 11;
+    }
+
+    /* Content */
+    #location-text h2{
+        font-size: 2.5em;
+    }
+
+    #location-text-container 
+    {
+        width: 90vw;
+        padding-left: 2.5em;
+        padding-right: 2em;
+        font-size: 1.2em;
+    }
+
+    #location-text-container::before
+    {
+        display: none;
+    }
+
+
+}
+
+@media screen and (min-width: 959px) {
+    nav {
+        position: static !important;
+        height: auto !important;
+        width: 100% !important;
+        right: auto !important;
+        border-left: none !important;
+        transition: none !important;
+    }
+
+    nav ul {
+        flex-direction: row !important;
+    }
+
+    #overlay {
+        display: none !important;
+    }
+
+    #open-sidebar-button,
+    #close-sidebar-button {
+        display: none !important;
+    }
+}

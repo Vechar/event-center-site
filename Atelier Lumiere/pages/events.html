@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/events.css">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Lora&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.png">
+
+    <script src="../scripts/index.js" defer></script>
+
+    <title>Events</title>
+</head>
+<body>
+    <!--Nav bar-->
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"></path></svg>
+        </button>
+    
+    <nav id="navbar">
+        <ul>
+            <li>
+                <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9"><path d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"></path>
+                    </svg>
+                </button>
+            </li>
+            <li class="logo"><h1>Atelier Lumière</h1></li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a class="active-link" href="events.html">Events</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+    <!--Main content-->
+
+    <main>
+        <!--Hero Section-->
+        <section id="hero">
+            <div id="hero-image">
+                <div id="hero-text-container">
+                    <h2 id="hero-main-logo">Events</h2>
+                </div>
+            </div>
+        </section>
+
+        <!--Events Text Section-->
+        <section id="events">
+            <div id="events-text">
+                <div id="events-title-container">
+                    <h2>Upcoming Exhibitions & Events</h2>
+                </div>
+                <div id="events-text-container">
+                    <p>Discover what’s unfolding at Atelier Lumière. From curated exhibitions to intimate artist conversations, each event offers a unique moment of connection through light, form, and story.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!--Featured Section-->
+        <section id="featured">
+            <article class="event-block" id="event1">
+                <img class="event-image" src="../resources/event1.jpg" alt="Event Image">
+                <div class="block-text-container">
+                    <h3 class="event-title">Neo-Modern: A Study in Texture</h2>
+                    <p class="event-date"> March 15 – April 30, 2025</p>
+                    <details class="event-details">
+                        <summary>
+                          An exploration of form, tension, and tactile memory, Neo-Modern brings together five rising contemporary artists known for transforming traditional materials into visceral, multi-sensory works. Expect canvas layered with resin, hand-bent metal frames, and sculpted installations that invite not just viewing — but presence. The gallery will be softly lit with diffused amber tones to highlight texture and shadow.
+                        </summary>
+                        
+                        <p>
+                          <br><br>
+                          <strong><span class="highlight">Opening Night Reception:</span></strong> March 15, 6–9 PM<br>
+                          Enjoy a selection of locally sourced hors d'oeuvres, including beet crostini, aged cheese platters, and lavender-rosemary shortbread. Sparkling wine and infused waters will be served in the courtyard lounge.
+                          <br><br>
+                          Live ambient cello music will echo gently throughout the main gallery space, enhancing the immersive tone of the evening.
+                        </p>
+                      </details>
+                      
+            </article>
+
+            <article class="event-block" id="event2">
+                <img class="event-image" src="../resources/event2.jpg" alt="Event Image">
+                <div class="block-text-container">
+                    <h3 class="event-title">Whispers in Porcelain</h2>
+                    <p class="event-date">April 10 – May 20, 2025   </p>
+                    <details class="event-details">
+                        <summary>
+                            Delicate, meditative, and deeply human, Whispers in Porcelain is a collection of hand-crafted ceramics from artist Elise Moreau.
+                            Each piece — from fractured bowls to hollow silhouettes — explores fragility and silence as creative forces. The exhibit is arranged across soft linen pedestals and candlelit niches, creating a contemplative flow through the gallery.                        </summary>
+                        
+                        <p>
+                          <br>
+                          <strong><span class="highlight">Curated Gallery Tea Experience:</span></strong> Saturdays, 2–5 PM
+                          <br>
+                          Guests are invited to enjoy a pairing of artisanal teas and small bites inspired by the exhibit’s themes — jasmine pearls, rose water madeleines, and white chocolate-dusted figs.
+                            A guided artist talk and live ceramic wheel demonstration will be held on April 20th at 3 PM.                        </p>
+                      </details>
+                      
+            </article>
+
+            <article class="event-block" id="event3">
+                <img class="event-image" src="../resources/event3.jpg" alt="Event Image">
+                <div class="block-text-container">
+                    <h3 class="event-title">Threads of Light</h2>
+                    <p class="event-date"> May 25 – July 10, 2025</p>
+                    <details class="event-details">
+                        <summary>
+                            Threads of Light is a multisensory exhibition combining textile art, suspended installations, photography, and projection mapping.
+                            Exploring themes of heritage and embodiment, the space becomes a walk-through tapestry of memory. As natural light shifts during the day, shadowplay reveals new details hidden in the woven surface                        </summary>
+                        <p>
+                          <br><br>
+                          <strong><span class="highlight">Evening Vernissage & Social:</span></strong> March 15, 6–9 PM<br>
+                          <br>
+                          Enjoy a curated tasting menu by Maison du Miel featuring elderflower gazpacho, honey-glazed goat cheese bites, and rose-petal panna cotta.
+                          Craft cocktails and mocktails will be available, featuring botanical infusions and delicate floral garnishes.
+                          
+                          Background audio features ambient soundscapes created by Paris-based composer Claire Thérien, enhancing the exhibit’s dreamlike quality.                        </p>
+                      </details>
+                      
+            </article>
+
+
+        </section>
+            
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <footer id="footer">
+            <div id="footer-social">
+                <ul>
+                    <li class="logo"><h1>Atelier Lumière</h1></li>
+                    <li><p>&copy; 2025 Atelier Lumière. All rights reserved.</p></li>
+                </ul>
+            </div>
+        </footer>
+        
+</body>
+</html>

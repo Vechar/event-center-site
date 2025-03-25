@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!--Fonts-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Parisienne&family=Lora&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="icon" type="image/x-icon" href="../resources/favicon.png">
+
+  
+  <link rel="stylesheet" href="../styles/menu.css" />
+
+  <script src="../scripts/index.js" defer></script>
+
+  <title>Menu</title>
+</head>
+<body>
+  <!--Nav bar-->
+  <button
+    id="open-sidebar-button"
+    onclick="openSidebar()"
+    aria-label="open sidebar"
+    aria-expanded="false"
+    aria-controls="navbar"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 -960 960 960">
+      <path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"></path>
+    </svg>
+  </button>
+  
+  <nav id="navbar">
+    <ul>
+      <li>
+        <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+          <svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 -960 960 960" fill="#c9c9c9">
+            <path d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"></path>
+          </svg>
+        </button>
+      </li>
+      <li class="logo"><h1>Atelier Lumière</h1></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a class="active-link" href="menu.html">Menu</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+  <!--Main content-->
+  <main>
+    <!--Menu Text Section-->
+    <section id="menu">
+      <div id="menu-text">
+        <div id="menu-title-container">
+          <h2>Gallery Refreshments Menu</h2>
+        </div>
+        <div id="menu-text-container">
+          <p>
+            Our curated menu is designed to complement the artful atmosphere of each exhibition. 
+            From delicate hors d’oeuvres to artisanal desserts, every item is prepared with 
+            aesthetic and sensory experience in mind.
+          </p>
+        </div>
+      </div>
+
+      <!--Menu Items Section-->
+      <div id="tables">
+        <h2 class="menu-name">Appetizers</h2>
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Beet & Goat Cheese Crostini</td>
+            <td>With crushed pistachio & microgreens</td>
+            <td>€6</td>
+          </tr>
+          <tr>
+            <td>Smoked Salmon Blini</td>
+            <td>Dill crème fraîche on buckwheat</td>
+            <td>€7</td>
+          </tr>
+        </table>
+
+        <h2 class="menu-name">Main Bites</h2>
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Truffle Mushroom Tartlets</td>
+            <td>Served warm with caramelized shallots</td>
+            <td>€9</td>
+          </tr>
+          <tr>
+            <td>Heirloom Tomato Galette</td>
+            <td>Flaky pastry with herbed chèvre</td>
+            <td>€10</td>
+          </tr>
+        </table>
+
+        <h2 class="menu-name">Dessertes</h2>
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Lavender Madeleines</td>
+            <td>Delicate sponge with sugared crust</td>
+            <td>€5</td>
+          </tr>
+          <tr>
+            <td>Rose Panna Cotta</td>
+            <td>Infused with cardamom and honey</td>
+            <td>€6.50</td>
+          </tr>
+        </table>
+
+        <h2 class="menu-name">Drinks</h2>
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Sparkling Rosé</td>
+            <td>Dry, floral, chilled</td>
+            <td>€8/glass</td>
+          </tr>
+          <tr>
+            <td>Herbal Infused Water</td>
+            <td>Mint, cucumber, lemon</td>
+            <td>€3</td>
+          </tr>
+          <tr>
+            <td>HArtisanal Coffee</td>
+            <td>Locally roasted</td>
+            <td>€4</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!--Footer-->
+  <footer id="footer">
+    <div id="footer-social">
+      <ul>
+        <li class="logo"><h1>Atelier Lumière</h1></li>
+        <li><p>&copy; 2025 Atelier Lumière. All rights reserved.</p></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

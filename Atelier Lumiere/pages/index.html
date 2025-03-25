@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/index.css">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.png">
+
+    <script src="../scripts/index.js" defer></script>
+
+    <title>Atelier Lumière</title>
+</head>
+<body>
+    <!--Nav bar-->
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"></path></svg>
+        </button>
+    
+    <nav id="navbar">
+        <ul>
+            <li>
+                <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9"><path d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"></path>
+                    </svg>
+                </button>
+            </li>
+            <li class="logo"><h1>Atelier Lumière</h1></li>
+            <li><a class="active-link" href="index.html" aria-current="page">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+    <!--Main content-->
+
+    <main>
+        <!--Hero Section-->
+        <section id="hero">
+            <div id="hero-image">
+                <div id="hero-text-container">
+                    <h2 id="hero-main-logo">Atelier Lumière</h2>
+                    <p id="hero-text">Where Light Meets Expression.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Welcome Section-->
+        <section id="welcome">
+            <div id="welcome-text">
+                <div id="welcome-title-container">
+                    <h2>Welcome to Atelier Lumière</h2>
+                </div>
+                <div id="welcome-text-container">
+                    <p>Welcome to <span class="highlight">Atelier Lumière</span>, where art and light converge in quiet harmony.
+                        Nestled in the heart of the city, our exhibition space invites you to step into a world of elegance, creativity, and subtle wonder.
+                        Whether you're a seasoned collector or a curious wanderer, we offer a sanctuary where expression takes center stage and every work tells a story.
+                        
+                        Let your senses slow down. Let the light guide you.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!--About Section-->
+        <section id="about">
+            <div id="about-text">
+                <div id="about-title-container">
+                    <h2>About Us</h2>
+                </div>
+                <div id="about-text-container">
+                    <p><span class="highlight">Atelier Lumière</span> is more than a gallery — it is a studio of presence, where art becomes a quiet dialogue between artist and audience.
+                        We curate contemporary and emerging works that give voice to bold ideas and delicate forms alike.
+                        
+                        Rooted in the belief that art should be felt as much as seen, our space offers a serene, inspiring canvas for connection and reflection.
+                        
+                        From solo exhibitions to immersive events, Atelier Lumière invites you to experience creativity in its most luminous form.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!--Featured Section-->
+        <section id="featured">
+            <div id="featured-text">
+                <div id="featured-title-container">
+                    <h2>Featured Events</h2>
+                </div>
+            </div>
+
+            <article class="featured-event">
+               <img class="event-image" src="../resources/event1.jpg" alt="Featured Event 1">
+                <div class="featured-event-container">
+                    <h3>Neo-Modern: A Study in Texture</h3>
+                     <p>A curated exploration of materiality and form, Neo-Modern brings together five contemporary artists whose works challenge the boundary between surface and depth.
+                        From layered canvas to sculpted light, this exhibit invites viewers to slow down and look closer.</p>
+                        <a href="events.html#event3" class="event-link">Learn more...</a>
+                </div>
+            </article>
+
+            <article class="featured-event">
+                <img class="event-image" src="../resources/event2.jpg" alt="Featured Event 2">
+                <div class="featured-event-container">
+                    <h3>Whispers in Porcelain</h3>
+                    <p>An intimate collection of ceramic installations exploring fragility, silence, and memory.
+                        Each piece, hand-formed and imperfect, invites viewers to contemplate the quiet beauty found in subtle cracks, shadows, and form.
+                    </p>
+                    <a href="events.html#event2" class="event-link">Learn more...</a>
+                </div>
+            </article>
+
+            <article class="featured-event">
+                <img class="event-image" src="../resources/event3.jpg" alt="Featured Event 3">
+                <div class="featured-event-container">
+                    <h3>Threads of Light</h3>
+                    <p>A multidisciplinary showcase blending fiber art, photography, and digital projection.
+                        Threads of Light examines the way we weave identity through texture, color, and reflection — a tapestry of modern voices suspended in motion.</p>
+                    <a href="events.html#event3" class="event-link">Learn more...</a>
+                </div>
+            </article>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <footer id="footer">
+            <div id="footer-social">
+                <ul>
+                    <li class="logo"><h1>Atelier Lumière</h1></li>
+                    <li><p>&copy; 2025 Atelier Lumière. All rights reserved.</p></li>
+                </ul>
+            </div>
+        </footer>
+        
+</body>
+</html>
